@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Aseguradora &quot;BE LIFE&quot;" Height="374.436" Width="512.03" ResizeMode="NoResize" WindowStyle="ToolWindow">
     <Grid Height="348" VerticalAlignment="Bottom" Margin="0,0,9,3">
-        <GroupBox x:Name="groupBox" Header="Clientes" Margin="10,10,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="426*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="groupBox" Header="Clientes" Margin="10,10,0,10" Grid.ColumnSpan="4">
             <Grid Margin="0,10,-2,-12">
                 <Image x:Name="ClientAdd_png" Margin="60,85,334,147" Source="ClientAdd.png" Stretch="Fill"/>
                 <Image x:Name="ClientDelete_png" Margin="60,184,334,48" Source="ClientDelete.png" Stretch="Fill"/>
@@ -18,12 +24,18 @@
                 <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="button3" Content="Actualizar" HorizontalAlignment="Left" Margin="245,265,0,0" VerticalAlignment="Top" Width="75"/>
                 <Image x:Name="DataSearch_png" Margin="392,133,24,129" Source="DataSearch.png" Stretch="Fill"/>
-                <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="370,184,0,0" VerticalAlignment="Top" Width="97"/>
-                <Button x:Name="button4" Content="Filtrar" HorizontalAlignment="Left" Margin="378,223,0,0" VerticalAlignment="Top" Width="75"/>
+                <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="355,184,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="0">
+                    <ComboBoxItem Content="Seleccione Filtro"/>
+                    <ComboBoxItem Content="Por Rut"/>
+                    <ComboBoxItem Content="Por Sexo"/>
+                    <ComboBoxItem Content="Por Estado Civil"/>
+                </ComboBox>
+                <Button x:Name="button4" Content="Filtrar" HorizontalAlignment="Left" Margin="378,223,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+                <Label x:Name="lblFaltaFiltro" Content="" HorizontalAlignment="Left" Margin="378,250,0,0" VerticalAlignment="Top" FontSize="9"/>
             </Grid>
         </GroupBox>
-        <Image x:Name="Clientes_png" Margin="367,38,38,230" Source="Clientes.png" Stretch="Fill"/>
-        <Image x:Name="Logo_BeLife_png" Margin="29,38,216,249" Source="Logo BeLife.png" Stretch="Fill"/>
+        <Image x:Name="Clientes_png" Margin="296,38,38,230" Source="Clientes.png" Stretch="Fill" Grid.Column="3"/>
+        <Image x:Name="Logo_BeLife_png" Margin="18.189,38,216,249" Source="Logo BeLife.png" Stretch="Fill" Grid.ColumnSpan="3" Grid.Column="1"/>
 
     </Grid>
 </Window>

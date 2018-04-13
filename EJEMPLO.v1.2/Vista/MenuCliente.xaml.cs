@@ -29,5 +29,33 @@ namespace Vista
             wpfIngresoCliente cr = new wpfIngresoCliente();
             cr.ShowDialog();
         }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+
+            lblFaltaFiltro.Content = ("");
+            if (cboFiltro.SelectedIndex == 1)
+            {
+                ListarRut lr = new ListarRut();
+                lr.ShowDialog();
+            }
+            if (cboFiltro.SelectedIndex == 2)
+            {
+                ListarSexo ls = new ListarSexo();
+                ls.ShowDialog();
+            }
+            if (cboFiltro.SelectedIndex == 3)
+            {
+                ListarEstado le = new ListarEstado();
+                le.ShowDialog();
+            }
+            if (cboFiltro.SelectedIndex == 0)
+            {
+                lblFaltaFiltro.Content = ("Seleccione Filtro");
+
+                lblFaltaFiltro.Foreground = Brushes.Red;
+            }
+
+        }
     }
 }

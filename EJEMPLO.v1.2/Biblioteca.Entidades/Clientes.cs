@@ -21,7 +21,7 @@ namespace Biblioteca.Entidades
                 }
                 else
                 {
-                    throw new ArgumentException("RUT Invalido");
+                    throw new ArgumentException("Rut Invalido");
                 }
                  }
         }

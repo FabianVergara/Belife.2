@@ -23,5 +23,30 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            lblFaltaFiltro.Content = ("");
+            if (cboFiltro.SelectedIndex == 1)
+            {
+
+            }
+            if (cboFiltro.SelectedIndex == 2)
+            {
+
+            }
+            if (cboFiltro.SelectedIndex == 3)
+            {
+
+            }
+            if (cboFiltro.SelectedIndex == 0)
+            {
+                lblFaltaFiltro.Content = ("Seleccione Filtro");
+
+                lblFaltaFiltro.Foreground = Brushes.Red;
+            }
+        }
     }
 }

@@ -69,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BuscarCliente.xaml.cs">
+      <DependentUpon>BuscarCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CrearContrato.xaml.cs">
       <DependentUpon>CrearContrato.xaml</DependentUpon>
     </Compile>
@@ -80,8 +83,11 @@
     <Compile Include="ListarEstado.xaml.cs">
       <DependentUpon>ListarEstado.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarRut.xaml.cs">
-      <DependentUpon>ListarRut.xaml</DependentUpon>
+    <Compile Include="ListarNroContrato.xaml.cs">
+      <DependentUpon>ListarNroContrato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListarRutContrato.xaml.cs">
+      <DependentUpon>ListarRutContrato.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListarSexo.xaml.cs">
       <DependentUpon>ListarSexo.xaml</DependentUpon>
@@ -95,6 +101,10 @@
     <Compile Include="wpfIngresoCliente.xaml.cs">
       <DependentUpon>wpfIngresoCliente.xaml</DependentUpon>
     </Compile>
+    <Page Include="BuscarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CrearContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,7 +113,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarRut.xaml">
+    <Page Include="ListarNroContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListarRutContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

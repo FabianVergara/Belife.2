@@ -19,11 +19,17 @@
                 <Button x:Name="button2" Content="Buscar" HorizontalAlignment="Left" Margin="245,180,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="button3" Content="Actualizar" HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top" Width="75"/>
                 <Image x:Name="DataSearch_png" Margin="389,145,32,132" Source="DataSearch.png" Stretch="Fill"/>
-                <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="375,196,0,0" VerticalAlignment="Top" Width="97"/>
+                <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="355,196,0,0" VerticalAlignment="Top" Width="117" SelectedIndex="0">
+                    <ComboBoxItem Content="Seleccione Filtro"/>
+                    <ComboBoxItem Content="Por Nro. Contrato"/>
+                    <ComboBoxItem Content="Por Rut"/>
+                    <ComboBoxItem Content="Por Nro. de Poliza"/>
+                </ComboBox>
+                <Label x:Name="lblFaltaFiltro" Content="" HorizontalAlignment="Left" Margin="368,260,0,0" VerticalAlignment="Top" FontSize="9"/>
             </Grid>
         </GroupBox>
         <Image x:Name="Logo_BeLife_png" Margin="29,38,173,259" Source="Logo BeLife.png" Stretch="Fill"/>
-        <Button x:Name="button4" Content="Filtrar" HorizontalAlignment="Left" Margin="397,256,-18,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button4" Content="Filtrar" HorizontalAlignment="Left" Margin="397,256,-18,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
 
     </Grid>
 </Window>
