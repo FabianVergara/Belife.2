@@ -9,14 +9,16 @@
     <Grid>
         <GroupBox x:Name="groupBox" Header="Datos del Contrato" Margin="10">
             <Grid Margin="10,10,-2,3">
-                <Label x:Name="label" Content="Plan:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,0.077"/>
-                <Label x:Name="label1" Content="Titular:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.196,0.043"/>
+                <Label x:Name="label" Content="Plan:" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.278,0.077"/>
+                <Label x:Name="label1" Content="Titular:" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.196,0.043"/>
                 <Label x:Name="label2" Content="Observaciones:" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_titular" HorizontalAlignment="Left" Height="23" Margin="70,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txt_titular" HorizontalAlignment="Left" Height="23" Margin="116,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <TextBox x:Name="txt_obs" HorizontalAlignment="Left" Height="62" Margin="116,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" UndoLimit="300"/>
                 <Button x:Name="btn_registrar" Content="Registrar" HorizontalAlignment="Left" Margin="194,215,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="btn_volver" Content="Volver" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Width="75"/>
-                <ComboBox x:Name="cbo_plan" HorizontalAlignment="Left" Margin="70,50,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="cbo_plan" HorizontalAlignment="Left" Margin="116,58,0,0" VerticalAlignment="Top" Width="120"/>
+                <CheckBox x:Name="checkBox" Content="" HorizontalAlignment="Left" Margin="116,100,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label3" Content="Declaracion&#xD;&#xA;salud" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
 
