@@ -22,7 +22,7 @@ namespace Biblioteca.Entidades
             Entidades = new BeLifeEntities();
         }
 
-        public double calculoPrimas(String codigo)
+        public double calculoPrimasanual(String codigo)
         {
             try
             {
@@ -39,79 +39,85 @@ namespace Biblioteca.Entidades
                     cli = new Clientes();
                     cli.Buscar(Cont.Titular);
                     Plan.BuscarPlan(Cont.PlanAsociado);
+                    //le paso el valor de la prima base
                     primab = Plan.PrimaBase;
 
                     int edad = (DateTime.Now.Year - cli.FechaNaci.Year);
                     Double recargoEdad = 0;
                     Double recargoSexo = 0;
                     Double recargoEstCiv = 0;
-////////////////////////////////////////////////////////////////////////////////////////
-//recargo por edad
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //1 UF = $ 26.633,18 Pesos Chilenos
+                    Double uf = 26633.18;
+                    //recargo por edad
                     if (edad >= 18 && edad <= 25)
                     {
-                        recargoEdad = 0.036;
+                        recargoEdad = 0.036 * uf;
                     }
                     else
                     {
                         if (edad >= 26 && edad <= 45)
                         {
-                            recargoEdad = 0.024;
+                            recargoEdad = 0.024 * uf;
                         }
                         else
                         {
-                            if (edad>45)
+                            if (edad > 45)
                             {
-                                recargoEdad = 0.06;
+                                recargoEdad = 0.06 * uf;
                             }
                         }
                     }
-////////////////////////////////////////////////////////////////////////////////////////
-//recargo x sexo
-                    if (cli.IdSexo==1)//hombre
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //recargo x sexo
+                    if (cli.IdSexo == 1)//hombre
                     {
-                        recargoSexo = 0.024;
+                        recargoSexo = 0.024 * uf;
                     }
                     else
                     {
-                        if (cli.IdSexo==2)//mujer
+                        if (cli.IdSexo == 2)//mujer
                         {
-                            recargoSexo = 0.012;
+                            recargoSexo = 0.012 * uf;
                         }
                     }
-////////////////////////////////////////////////////////////////////////////////////////
-//recargo por estado civil                
+
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //recargo por estado civil                
                     switch (cli.IdEstadoCivil)
                     {
                         case 1://soltero
-                            recargoEstCiv = 0.048;
+                            recargoEstCiv = 0.048 * uf;
 
                             break;
                         case 2://casado
 
-                            recargoEstCiv =0.024 ;
+                            recargoEstCiv = 0.024 * uf;
                             break;
                         //case 3://divorciado
-                          //  break;
+                        //  break;
                         //case 4://viudo
-                            //break;
+                        //break;
                         default://otro
-                            recargoEstCiv = 0.036;
+                            recargoEstCiv = 0.036 * uf;
                             break;
 
-                            
+
                     }
+
+
+
+                    ////////////////////////////////////////////////////////////////////////////////////////  
+
+                    Calculo = primab +recargoEdad+recargoEstCiv+recargoSexo;
+
+
+              
+                    //retorna la PrimaAnual
+                    
+
+
                 }
-////////////////////////////////////////////////////////////////////////////////////////                
-                //le paso el valor de la prima base
-
-                //valido
-
-                //
-                //Cont.PrimaAnual
-                //Cont.PrimaMensual <-- quiero guardar valores
-
-
-
                 return Calculo;
             }
             catch (Exception)
@@ -120,10 +126,111 @@ namespace Biblioteca.Entidades
                 return 0;
             }
             
+        }
+        public double calculoPrimasmensual(String codigo)
+        {
+            try
+            {
 
-            
+                double Calculo = 0;
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Entidades.Planes();
+                Biblioteca.Entidades.Contratos Cont;
+                Cont = new Entidades.Contratos();
+                double primab;
+                if (Cont.BuscarContrato(codigo) == true)
+                {
+                    Biblioteca.Entidades.Clientes cli;
+                    cli = new Clientes();
+                    cli.Buscar(Cont.Titular);
+                    Plan.BuscarPlan(Cont.PlanAsociado);
+                    //le paso el valor de la prima base
+                    primab = Plan.PrimaBase;
 
-            
+                    int edad = (DateTime.Now.Year - cli.FechaNaci.Year);
+                    Double recargoEdad = 0;
+                    Double recargoSexo = 0;
+                    Double recargoEstCiv = 0;
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //1 UF = $ 26.633,18 Pesos Chilenos
+                    Double uf = 26633.18;
+                    //recargo por edad
+                    if (edad >= 18 && edad <= 25)
+                    {
+                        recargoEdad = 0.036 * uf;
+                    }
+                    else
+                    {
+                        if (edad >= 26 && edad <= 45)
+                        {
+                            recargoEdad = 0.024 * uf;
+                        }
+                        else
+                        {
+                            if (edad > 45)
+                            {
+                                recargoEdad = 0.06 * uf;
+                            }
+                        }
+                    }
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //recargo x sexo
+                    if (cli.IdSexo == 1)//hombre
+                    {
+                        recargoSexo = 0.024 * uf;
+                    }
+                    else
+                    {
+                        if (cli.IdSexo == 2)//mujer
+                        {
+                            recargoSexo = 0.012 * uf;
+                        }
+                    }
+
+                    ////////////////////////////////////////////////////////////////////////////////////////
+                    //recargo por estado civil                
+                    switch (cli.IdEstadoCivil)
+                    {
+                        case 1://soltero
+                            recargoEstCiv = 0.048 * uf;
+
+                            break;
+                        case 2://casado
+
+                            recargoEstCiv = 0.024 * uf;
+                            break;
+                        //case 3://divorciado
+                        //  break;
+                        //case 4://viudo
+                        //break;
+                        default://otro
+                            recargoEstCiv = 0.036 * uf;
+                            break;
+
+
+                    }
+
+
+
+                    ////////////////////////////////////////////////////////////////////////////////////////  
+
+                    Calculo = (primab + recargoEdad + recargoEstCiv + recargoSexo)/12;
+
+
+
+                    //retorna la PrimaAnual
+
+
+
+                }
+                return Calculo;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+
         }
     }
 }
