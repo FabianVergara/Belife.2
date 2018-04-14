@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Biblioteca.DALC;
+using Biblioteca.Entidades;
 namespace Biblioteca.Entidades
 {
     public class Tarificador
@@ -16,13 +17,18 @@ namespace Biblioteca.Entidades
 
         //Este valor se devolvera al contrato
 
-
+        public Tarificador()
+        {
+            Entidades = new BeLifeEntities();
+        }
 
         public double calculoPrimas(double PrimaBase)
         {
+            double Calculo = 0;
 
+            
 
-            return bla;
+            return Calculo;
         }
     }
 }
