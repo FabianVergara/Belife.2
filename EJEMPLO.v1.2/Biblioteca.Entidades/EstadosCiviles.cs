@@ -45,5 +45,7 @@ namespace Biblioteca.Entidades
 
 
         }
+
+        public bool
     }
 }
