@@ -88,9 +88,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EliminarCliente.xaml.cs">
-      <DependentUpon>EliminarCliente.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ListarEstado.xaml.cs">
       <DependentUpon>ListarEstado.xaml</DependentUpon>
     </Compile>
@@ -121,10 +118,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CrearContrato.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EliminarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

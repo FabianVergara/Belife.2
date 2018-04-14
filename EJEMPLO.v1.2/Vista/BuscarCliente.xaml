@@ -16,9 +16,10 @@
                 <Label x:Name="label" Content="Rut del Cliente:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="110,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                 <Button x:Name="button" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="256,12,0,0" VerticalAlignment="Top" Width="58" Height="22"/>
-                <Button x:Name="btnVolver" Content="Volver" Grid.Column="1" HorizontalAlignment="Left" Margin="25,212,0,0" VerticalAlignment="Top" Width="75" Click="btnVolver_Click"/>
-                <Button x:Name="btnListar" Content="Listar Clientes" Grid.Column="1" HorizontalAlignment="Left" Margin="127,212,0,0" VerticalAlignment="Top" Width="103"/>
+                <Button x:Name="btnActualizar" Content="Actualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,212,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
+                <Button x:Name="btnListar" Content="Listar Clientes" Grid.Column="1" HorizontalAlignment="Left" Margin="127,212,0,0" VerticalAlignment="Top" Width="103" Click="btnListar_Click"/>
                 <Button x:Name="btnEliminar" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="256,212,0,0" VerticalAlignment="Top" Width="75"/>
+                <DataGrid x:Name="dgvListado" Grid.Column="1" Margin="10,55,10,0" VerticalAlignment="Top" Height="77" IsReadOnly="True"/>
             </Grid>
         </GroupBox>
 
