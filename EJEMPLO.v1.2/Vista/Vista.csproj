@@ -72,6 +72,9 @@
     <Compile Include="BuscarCliente.xaml.cs">
       <DependentUpon>BuscarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BuscarContrato.xaml.cs">
+      <DependentUpon>BuscarContrato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CrearContrato.xaml.cs">
       <DependentUpon>CrearContrato.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
       <DependentUpon>wpfIngresoCliente.xaml</DependentUpon>
     </Compile>
     <Page Include="BuscarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuscarContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -9,12 +9,20 @@ namespace Biblioteca.Entidades
     public class Tarificador
     {
         //metodo tiene validaciones
-
+        //metodo lleva parametros debe recibir la primaBase
         //validar x edad
         //validar por sexo
         //validar por Estado Civil
 
         //Este valor se devolvera al contrato
-         
+
+
+
+        public double calculoPrimas(double PrimaBase)
+        {
+
+
+            return bla;
+        }
     }
 }
