@@ -10,28 +10,24 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="11*"/>
             <ColumnDefinition Width="28*"/>
-            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="426*"/>
         </Grid.ColumnDefinitions>
         <GroupBox x:Name="groupBox" Header="Clientes" Margin="10,10,0,10" Grid.ColumnSpan="4">
             <Grid Margin="0,10,-2,-12">
-                <Image x:Name="ClientAdd_png" Margin="60,85,334,147" Source="ClientAdd.png" Stretch="Fill"/>
-                <Image x:Name="ClientDelete_png" Margin="60,184,334,48" Source="ClientDelete.png" Stretch="Fill"/>
-                <Image x:Name="ClientSearch_png" Margin="256,85,139,0" Source="ClientSearch.png" Stretch="Fill" Height="76" VerticalAlignment="Top"/>
-                <Image x:Name="ClientUpdate_png" Margin="256,184,139,48" Source="ClientUpdate.png" Stretch="Fill"/>
-                <Button x:Name="button" Content="Registrar" HorizontalAlignment="Left" Margin="60,157,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click"/>
-                <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="245,265,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
-                <Image x:Name="DataSearch_png" Margin="392,133,24,129" Source="DataSearch.png" Stretch="Fill"/>
-                <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="355,184,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="0">
+                <Image x:Name="ClientAdd_png" Margin="26,135,368,97" Source="ClientAdd.png" Stretch="Fill"/>
+                <Image x:Name="ClientSearch_png" Margin="177,141,218,0" Source="ClientSearch.png" Stretch="Fill" Height="76" VerticalAlignment="Top"/>
+                <Button x:Name="button" Content="Registrar" HorizontalAlignment="Left" Margin="26,213,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+                <Image x:Name="DataSearch_png" Margin="325,145,77,97" Source="DataSearch.png" Stretch="Fill"/>
+                <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="304,213,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="0">
                     <ComboBoxItem Content="Seleccione Filtro"/>
                     <ComboBoxItem Content="Por Rut"/>
                     <ComboBoxItem Content="Por Sexo"/>
                     <ComboBoxItem Content="Por Estado Civil"/>
                 </ComboBox>
-                <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="378,223,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+                <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="325,245,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
                 <Label x:Name="lblFaltaFiltro" Content="" HorizontalAlignment="Left" Margin="378,250,0,0" VerticalAlignment="Top" FontSize="9"/>
-                <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="256,157,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click_1"/>
+                <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="177,213,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click_1"/>
             </Grid>
         </GroupBox>
         <Image x:Name="Clientes_png" Margin="296,38,38,230" Source="Clientes.png" Stretch="Fill" Grid.Column="3"/>
