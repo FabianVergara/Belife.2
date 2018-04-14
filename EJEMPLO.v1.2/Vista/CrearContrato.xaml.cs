@@ -42,13 +42,46 @@ namespace Vista
              * vigencia(true/false)
              *Prima anual y mensual (a partir del tarificador)
              */
-
             //debo ingresar rut cliente
             //plan asociado
             //--del plan asociado la poliza es automatica
             //declaracion de salud (si/no)
             //observaciones
-            
+            try
+            {
+                //validar si es cliente
+                Contratos con = new Contratos();
+                if (con.buscar(txt_titular.Text) == true) { 
+                
+                String titular = txt_titular.Text;
+
+                DateTime fechahoy = DateTime.Now;
+                string formatoDeOro = fechahoy.ToString("YYYYMMDDHHmmSS");
+                    //validar formato fecha antes de guardar
+                    int mes = int.Parse(formatoDeOro.Substring(4,2));
+                    int dia = int.Parse(formatoDeOro.Substring(6, 2));
+                    int hora = int.Parse(formatoDeOro.Substring(8, 2));
+                    int minutos = int.Parse(formatoDeOro.Substring(10, 2));
+                    int segundos = int.Parse(formatoDeOro.Substring(-2));
+                    if (mes < 10)
+                    {
+                        String[] partes = formatoDeOro.;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("El rut ingresado no pertenece a ningun cliente");
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
     }
