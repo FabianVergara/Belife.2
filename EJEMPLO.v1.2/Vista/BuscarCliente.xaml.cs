@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Biblioteca.Entidades;
+using Biblioteca.DALC;
 
 namespace Vista
 {
@@ -19,9 +21,11 @@ namespace Vista
     /// </summary>
     public partial class BuscarCliente : Window
     {
+        Clientes cl = new Clientes();
         public BuscarCliente()
         {
             InitializeComponent();
+            
         }
 
       
@@ -33,7 +37,8 @@ namespace Vista
 
         private void btnListar_Click(object sender, RoutedEventArgs e)
         {
-
+             dtListado.ItemsSource = ListadoClientes.ToList();
+            dtListado.Items.Refresh();
         }
     }
 }

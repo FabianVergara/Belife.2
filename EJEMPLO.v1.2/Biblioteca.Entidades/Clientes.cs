@@ -153,7 +153,7 @@ namespace Biblioteca.Entidades
                 //coleccion del tipo clase Cliente
                 List<Clientes> ListadoClientes = new List<Clientes>();
                 //crear un objeto con el listado de todos los clientes
-                //almacenados en el ,odelo Entidades
+                //almacenados en el Modelo Entidades
                 var ClientesModelo = Entidades.Cliente.ToList();
                 //recuperar cada uno de los registros del modelo
                 //cada obeto Cliente perteneciente al Dalc
