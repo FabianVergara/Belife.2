@@ -313,6 +313,40 @@ namespace Biblioteca.Entidades
 
         }
 
+        public bool BuscarContrato(String Codigo)
+        {
+            try
+            {
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Entidades.Planes();
+                Biblioteca.DALC.Contrato Con;
+                Con = Entidades.Contrato.First(a => a.Numero.Equals(Codigo));
+                this.NumeroContrato = Con.Numero;
+                this.Creacion = Con.FechaCreacion;
+                this.Termino = (DateTime)Con.FechaTermino;
+                this.Titular = Con.RutCliente;
+                this.PlanAsociado = Con.CodigoPlan;
+                Plan.BuscarPlan(Con.CodigoPlan);//esto esta bien
+                this.Poliza = Plan.PolizaActual;
+                this.InicioVigencia = Con.FechaInicioVigencia;
+                this.FinVigencia = Con.FechaFinVigencia;
+                this.Vigente = Con.Vigente;
+                this.ConDeclaracionSalud = Con.DeclaracionSalud;
+                this.PrimaAnual = Con.PrimaAnual;
+                this.PrimaMensual = Con.PrimaMensual;
+                this.Observaciones = Con.Observaciones;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return false;
+            }
+
+
+        }
+
+
     }
 
 

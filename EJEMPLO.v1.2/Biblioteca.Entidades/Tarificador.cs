@@ -24,11 +24,33 @@ namespace Biblioteca.Entidades
 
         public double calculoPrimas(double PrimaBase)
         {
-            double Calculo = 0;
+            try
+            {
+                double Calculo = 0;
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Entidades.Planes();
+                Biblioteca.Entidades.Contratos Cont;
+                Cont = new Entidades.Contratos();
+
+
+                //
+                //Cont.PrimaAnual
+                //Cont.PrimaMensual <-- quiero guardar valores
+
+
+
+                return Calculo;
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+            
 
             
 
-            return Calculo;
+            
         }
     }
 }
