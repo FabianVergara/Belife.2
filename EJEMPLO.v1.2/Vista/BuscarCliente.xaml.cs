@@ -37,8 +37,7 @@ namespace Vista
 
         private void btnListar_Click(object sender, RoutedEventArgs e)
         {
-             dtListado.ItemsSource = ListadoClientes.ToList();
-            dtListado.Items.Refresh();
+             
         }
     }
 }
