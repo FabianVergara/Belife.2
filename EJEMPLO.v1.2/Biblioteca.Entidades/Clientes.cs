@@ -220,5 +220,33 @@ namespace Biblioteca.Entidades
             }
 
         }
+
+        public bool Buscar(String rut)
+        {
+            try
+            {
+
+                Biblioteca.DALC.Cliente Cli;
+                Cli = Entidades.Cliente.
+                    First(b => b.RutCliente.Equals(RutCliente));
+
+                this.RutCliente = Cli.RutCliente;
+                this.Nombres = Cli.Nombres;
+                this.Apellidos = Cli.Apellidos;
+                this.FechaNaci = Cli.FechaNacimiento;
+                this.IdSexo = Cli.IdSexo;
+                this.IdEstadoCivil = Cli.IdEstadoCivil;
+
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+
+        }
+
     }
 }
