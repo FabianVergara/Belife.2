@@ -30,7 +30,7 @@
                     <ComboBoxItem Content="Por Sexo"/>
                     <ComboBoxItem Content="Por Estado Civil"/>
                 </ComboBox>
-                <Button x:Name="button4" Content="Filtrar" HorizontalAlignment="Left" Margin="378,223,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+                <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="378,223,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
                 <Label x:Name="lblFaltaFiltro" Content="" HorizontalAlignment="Left" Margin="378,250,0,0" VerticalAlignment="Top" FontSize="9"/>
             </Grid>
         </GroupBox>

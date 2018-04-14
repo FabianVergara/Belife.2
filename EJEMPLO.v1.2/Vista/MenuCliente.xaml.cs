@@ -30,7 +30,7 @@ namespace Vista
             cr.ShowDialog();
         }
 
-        private void button4_Click(object sender, RoutedEventArgs e)
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
 
             lblFaltaFiltro.Content = ("");
@@ -66,13 +66,13 @@ namespace Vista
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            EliminarCliente eli = new EliminarCliente();
+            eli.ShowDialog();
         }
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            EliminarCliente eli = new EliminarCliente();
-            eli.ShowDialog();
+            
         }
     }
 }
