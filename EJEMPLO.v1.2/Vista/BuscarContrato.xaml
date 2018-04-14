@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="Buscar Contrato" Height="300" Width="300">
+        Title="Buscar Contrato" Height="334.042" Width="421.277">
     <Grid>
         <GroupBox x:Name="groupBox" Header="Buscador de Contrato" Margin="10">
             <Grid Margin="10,10,-2,1">
-                <Label x:Name="label" Content="Identificador del Contrato:" HorizontalAlignment="Left" Margin="0,7,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                <TextBox x:Name="txt_idcontrato" HorizontalAlignment="Left" Height="23" Margin="164,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-                <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="167,48,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label" Content="Identificador del Contrato:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="txt_idcontrato" HorizontalAlignment="Left" Height="23" Margin="165,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+                <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="279,66,0,0" VerticalAlignment="Top" Width="75"/>
+                <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="114" Width="353"/>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="290,0,0,0" VerticalAlignment="Top" Width="73" Source="ContractSearch.png"/>
             </Grid>
         </GroupBox>
 
