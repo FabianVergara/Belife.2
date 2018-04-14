@@ -14,7 +14,7 @@
                 <Image x:Name="ContractSearch_png" Margin="233,107,162,148" Source="ContractSearch.png" Stretch="Fill"/>
                 <Image x:Name="ContractDelete_png" Margin="41,210,356,45" Source="ContractDelete.png" Stretch="Fill"/>
                 <Image x:Name="ContractUpdate_png" Margin="233,210,162,45" Source="ContractUpdate.png" Stretch="Fill"/>
-                <Button x:Name="button" Content="Crear" HorizontalAlignment="Left" Margin="51,180,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="button" Content="Crear" HorizontalAlignment="Left" Margin="51,180,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
                 <Button x:Name="button1" Content="Terminar" HorizontalAlignment="Left" Margin="51,284,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="button2" Content="Buscar" HorizontalAlignment="Left" Margin="245,180,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="button3" Content="Actualizar" HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top" Width="75"/>

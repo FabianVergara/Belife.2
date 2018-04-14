@@ -57,5 +57,22 @@ namespace Vista
             }
 
         }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            BuscarCliente bus = new BuscarCliente();
+            bus.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            EliminarCliente eli = new EliminarCliente();
+            eli.ShowDialog();
+        }
     }
 }

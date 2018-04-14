@@ -69,6 +69,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BeLifeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeLifeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BuscarCliente.xaml.cs">
       <DependentUpon>BuscarCliente.xaml</DependentUpon>
     </Compile>
@@ -82,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCliente.xaml.cs">
+      <DependentUpon>EliminarCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListarEstado.xaml.cs">
       <DependentUpon>ListarEstado.xaml</DependentUpon>
@@ -113,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CrearContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EliminarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,6 +187,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BeLifeDataSet.xsc">
+      <DependentUpon>BeLifeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BeLifeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BeLifeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BeLifeDataSet.xss">
+      <DependentUpon>BeLifeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

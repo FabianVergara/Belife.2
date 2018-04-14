@@ -20,9 +20,9 @@
                 <Image x:Name="ClientSearch_png" Margin="256,85,139,0" Source="ClientSearch.png" Stretch="Fill" Height="76" VerticalAlignment="Top"/>
                 <Image x:Name="ClientUpdate_png" Margin="256,184,139,48" Source="ClientUpdate.png" Stretch="Fill"/>
                 <Button x:Name="button" Content="Registrar" HorizontalAlignment="Left" Margin="60,157,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <Button x:Name="button1" Content="Buscar" HorizontalAlignment="Left" Margin="245,157,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="button3" Content="Actualizar" HorizontalAlignment="Left" Margin="245,265,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="245,157,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+                <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click"/>
+                <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="245,265,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
                 <Image x:Name="DataSearch_png" Margin="392,133,24,129" Source="DataSearch.png" Stretch="Fill"/>
                 <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="355,184,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="0">
                     <ComboBoxItem Content="Seleccione Filtro"/>

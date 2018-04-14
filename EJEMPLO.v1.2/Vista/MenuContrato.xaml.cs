@@ -48,5 +48,10 @@ namespace Vista
                 lblFaltaFiltro.Foreground = Brushes.Red;
             }
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
