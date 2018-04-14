@@ -65,7 +65,8 @@ namespace Vista
                     int segundos = int.Parse(formatoDeOro.Substring(-2));
                     if (mes < 10)
                     {
-                        String[] partes = formatoDeOro.;
+                      /*  String [] partes = formatoDeOro.Split();
+                        String cadena = partes[];* to be continue*/ 
                     }
 
                 }

@@ -69,6 +69,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ActualizarCliente.xaml.cs">
+      <DependentUpon>ActualizarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarContrato.xaml.cs">
+      <DependentUpon>ActualizarContrato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BuscarCliente.xaml.cs">
       <DependentUpon>BuscarCliente.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Cliente.xaml.cs">
+      <DependentUpon>Eliminar Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarContrato.xaml.cs">
+      <DependentUpon>EliminarContrato.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListarEstado.xaml.cs">
       <DependentUpon>ListarEstado.xaml</DependentUpon>
@@ -104,6 +116,14 @@
     <Compile Include="wpfIngresoCliente.xaml.cs">
       <DependentUpon>wpfIngresoCliente.xaml</DependentUpon>
     </Compile>
+    <Page Include="ActualizarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ActualizarContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BuscarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,6 +133,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CrearContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Eliminar Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EliminarContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
