@@ -15,7 +15,7 @@ namespace Biblioteca.Entidades
         public String Titular { get; set; }
         public String Poliza{ get; set; }
         public String PlanAsociado { get; set; }
-        //poliza?? la realizo aca en el diagrama de clases sale pero en el modelo no aparece
+        
         public DateTime InicioVigencia { get; set; }
         public DateTime FinVigencia { get; set; }
         public Boolean Vigente { get; set; }
@@ -37,8 +37,8 @@ namespace Biblioteca.Entidades
             {
                 Biblioteca.DALC.Contrato Con;
                 Con = new DALC.Contrato();
-                Biblioteca.DALC.Plan Plan;
-                Plan = new DALC.Plan();
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Planes();
                 
                 Con.Numero = this.NumeroContrato;
                 Con.FechaCreacion = this.Creacion;
@@ -99,9 +99,10 @@ namespace Biblioteca.Entidades
 
                 Con.Numero = this.NumeroContrato;
                 Con.FechaCreacion = this.Creacion;
-                Con.FechaTermino = this.Termino;//e.e
+                //Con.FechaTermino = this.Termino;//no puede ser modificada
                 Con.RutCliente = this.Titular;
                 Con.CodigoPlan = this.PlanAsociado;
+                Plan.BuscarPlan(Con.CodigoPlan);
                 Plan.PolizaActual = this.Poliza;
                 Con.FechaInicioVigencia = this.InicioVigencia;
                 Con.FechaFinVigencia = this.FinVigencia;
@@ -163,8 +164,8 @@ namespace Biblioteca.Entidades
                 List<Contratos> ListadoContrato = new List<Contratos>();
                 var ContratoModelo = Entidades.Contrato.ToList();
 
-                Biblioteca.DALC.Plan Plan;
-                Plan = new DALC.Plan();
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Planes();
 
                 foreach (var item in ContratoModelo)
                 {
@@ -175,6 +176,7 @@ namespace Biblioteca.Entidades
                     Con.Termino = (DateTime)item.FechaTermino;
                     Con.Titular = item.RutCliente;
                     Con.PlanAsociado = item.CodigoPlan;
+                    Plan.BuscarPlan(Con.CodigoPlan); 
                     Con.Poliza = item.Plan.PolizaActual;
                     Con.InicioVigencia = item.FechaInicioVigencia;
                     Con.FinVigencia = item.FechaFinVigencia;
