@@ -23,5 +23,18 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            EliminarCliente ic = new EliminarCliente();
+            ic.Close();//no cierra por algun motivo?
+            MenuCliente mc = new MenuCliente();
+            mc.Show();
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, RoutedEventArgs e)
+        private void cboFiltro_Click(object sender, RoutedEventArgs e)
         {
 
 
@@ -49,7 +49,32 @@ namespace Vista
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cboFiltro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnTerminar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -23,5 +23,13 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            BuscarCliente ic = new BuscarCliente();
+            ic.Close();//no cierra por algun motivo?
+            MenuCliente mc = new MenuCliente();
+            mc.Show();
+        }
     }
 }

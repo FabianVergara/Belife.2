@@ -58,21 +58,23 @@ namespace Vista
 
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
-        {
-            BuscarCliente bus = new BuscarCliente();
-            bus.ShowDialog();
-        }
+       
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            EliminarCliente eli = new EliminarCliente();
-            eli.ShowDialog();
+            EliminarCliente elim = new EliminarCliente();
+            elim.ShowDialog();
         }
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void btnBuscar_Click_1(object sender, RoutedEventArgs e)
+        {
+            BuscarCliente bus = new BuscarCliente();
+            bus.ShowDialog();
         }
     }
 }
