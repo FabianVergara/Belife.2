@@ -21,27 +21,37 @@ namespace Vista
     public partial class BuscarContrato : Window
     {
 
-        DataTable tablita = new DataTable();
+        
 
         public BuscarContrato()
         {
             InitializeComponent();
 
-            tablita.Columns.Add("Id");
-            tablita.Columns.Add("Creación");
-            tablita.Columns.Add("Termino");
-            tablita.Columns.Add("Titular");
-            tablita.Columns.Add("Plan");
-            tablita.Columns.Add("Poliza");
-            tablita.Columns.Add("Inicio Vig");
-            tablita.Columns.Add("Fin Vig");
-            tablita.Columns.Add("Vig");
-            tablita.Columns.Add("Salud");
-            tablita.Columns.Add("Prima Anual");
-            tablita.Columns.Add("Prima Mensual");
-            tablita.Columns.Add("Observaciones");
-            tbl_contrato.IsItemItsOwnContainer(tablita);
+            
 
+
+        }
+
+
+        //llenar tabla
+
+        private void LlenarTabla(IEnumerable<Contratos> listado) {
+            DataTable tablita = new DataTable();
+
+            tablita.Columns.Add("Id",typeof(string));
+            tablita.Columns.Add("Creación", typeof(string));
+            tablita.Columns.Add("Termino", typeof(string));
+            tablita.Columns.Add("Titular",typeof(string));
+            tablita.Columns.Add("Plan", typeof(string));
+            tablita.Columns.Add("Poliza", typeof(string));
+            tablita.Columns.Add("Inicio Vig", typeof(string));
+            tablita.Columns.Add("Fin Vig", typeof(string));
+            tablita.Columns.Add("Vig", typeof(string));
+            tablita.Columns.Add("Salud",typeof(string));
+            tablita.Columns.Add("Prima Anual", typeof(string));
+            tablita.Columns.Add("Prima Mensual", typeof(string));
+            tablita.Columns.Add("Observaciones", typeof(string));
+            tbl_contrato.IsItemItsOwnContainer(tablita);
 
         }
     }
