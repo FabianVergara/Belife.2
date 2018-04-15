@@ -19,8 +19,7 @@
                 <DatePicker x:Name="dpkFechaNaci" HorizontalAlignment="Left" Margin="160,100,0,0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="cboEstado" HorizontalAlignment="Left" Margin="90,169,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0"/>
                 <ComboBox x:Name="cboSexo" HorizontalAlignment="Left" Margin="90,136,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0"/>
-                <Button x:Name="button" Content="Volver" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <Button x:Name="btn_limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="160,275,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+                <Button x:Name="btn_limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="26,275,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" />
                 <Button x:Name="btn_ingresarcli" Content="Ingresar" HorizontalAlignment="Left" Margin="330,275,0,0" VerticalAlignment="Top" Width="75" Click="ingresar"/>
                 <Image x:Name="ClientAdd_png" Margin="330,213,43,66" Source="ClientAdd.png" Stretch="Fill"/>
                 <Image x:Name="Clientes_png" Margin="378,0,10,276" Source="Clientes.png" Stretch="Fill"/>

@@ -83,14 +83,7 @@ namespace Vista
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            wpfIngresoCliente ic = new wpfIngresoCliente();
-            ic.Close();//no cierra por algun motivo?
-            MenuCliente mc = new MenuCliente();
-            mc.Show();
-            
-        }
+       
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {

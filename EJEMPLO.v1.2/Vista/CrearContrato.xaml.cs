@@ -120,7 +120,7 @@ namespace Vista
 //______________________________________________________________________________________________________________________________
                     int yyyy = int.Parse(aaaa) + 1;//para la fecha de fin de vigencia
                     DateTime fechaCreacion = DateTime.Parse((string.Concat(aaaa, MM, DD, hh, mm, ss)));
-                    String fecha = fechaCreacion.ToString("YYYYMMDDHHmmSS");
+                    string fecha = fechaCreacion.ToString("YYYYMMDDHHmmSS");
                     //Con.Numero es automatico en la BD
                     Con.titular = txt_titular.Text;
                     Con.PlanAsociado = cbo_plan.SelectedIndex + 1;
