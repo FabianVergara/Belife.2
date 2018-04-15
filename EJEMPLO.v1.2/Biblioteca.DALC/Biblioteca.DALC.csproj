@@ -108,6 +108,16 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Entidades\Biblioteca.Entidades.csproj">
+      <Project>{a9feff46-bc1f-4879-901a-5bd3ffe583bf}</Project>
+      <Name>Biblioteca.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vista\Vista.csproj">
+      <Project>{8b310222-d111-477f-856f-d5118cb7bfe9}</Project>
+      <Name>Vista</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -37,11 +37,11 @@
   <ItemGroup>
     <Reference Include="Biblioteca.DALC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Biblioteca.Entidades\bin\Debug\Biblioteca.DALC.dll</HintPath>
+      <HintPath>..\Biblioteca.DALC\bin\Debug\Biblioteca.DALC.dll</HintPath>
     </Reference>
     <Reference Include="Biblioteca.Entidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Biblioteca.Entidades\bin\Debug\Biblioteca.Entidades.dll</HintPath>
+      <HintPath>..\Biblioteca.Entidades\obj\Debug\Biblioteca.Entidades.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
