@@ -45,6 +45,26 @@ namespace Biblioteca.Entidades
 
 
         }
+
+        public bool BuscarEstadosCiviles(string codigo)
+        {
+            try
+            {
+               // var EstCivModelo = Entidades.EstadoCivil();
+
+                DALC.EstadoCivil EstCivModelo = Entidades.EstadoCivil.First(ev => ev.Id.Equals(codigo));
+
+                this.Descripcion = EstCivModelo.Descripcion;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Mensaje(ex.Message);
+                return false;
+            }
+
+
+        }
     }
 }
 

@@ -58,9 +58,9 @@ namespace Biblioteca.Entidades
         {
             try
             {
-                var SexoModelo = Entidades.Sexo();
+              //  var SexoModelo = Entidades.Sexo();
 
-                DALC.Sexo Modelo = Entidades.Sexo.First(se => se.IdSexo.Equals(codigo));
+                DALC.Sexo SexoModelo = Entidades.Sexo.First(se => se.IdSexo.Equals(codigo));
 
                 this.Descripcion = SexoModelo.Descripcion;
                 return true;
