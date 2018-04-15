@@ -54,7 +54,7 @@ namespace Vista
                 cli.Nombres = txtnNombre.Text;
                 cli.Apellidos = txtApellido.Text;
 
-               // DateTime fechahoy = DateTime.Now;//para contrato
+               //DateTime fechahoy = DateTime.Now;//para contrato
                // string formatoDeOro = fechahoy.ToString("YYYYMMDDHHmmSS");//
 
                 cli.FechaNaci = (DateTime)dpkFechaNaci.SelectedDate;

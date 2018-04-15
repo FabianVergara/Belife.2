@@ -28,7 +28,8 @@ namespace Biblioteca.Entidades
 
         public String Nombres { get; set; }
         public String Apellidos { get; set; }
-        public DateTime FechaNaci { get; set; }
+        public DateTime FechaNaci { get; set; }//regla de negocio debe ser mayor a 18 
+        //int edad = (DateTime.Now.Year - FechaNaci.Year);
         public int IdSexo { get; set; }
         public int IdEstadoCivil { get; set; }
         Biblioteca.DALC.BeLifeEntities Entidades;
