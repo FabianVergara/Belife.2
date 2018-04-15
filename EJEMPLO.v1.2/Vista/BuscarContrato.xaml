@@ -12,7 +12,7 @@
                 <Label x:Name="label" Content="Identificador del Contrato:" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                 <TextBox x:Name="txt_idcontrato" HorizontalAlignment="Left" Height="23" Margin="165,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
                 <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="279,66,0,0" VerticalAlignment="Top" Width="75"/>
-                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="114" Width="353"/>
+                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="114" Width="353" />
                 <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="290,0,0,0" VerticalAlignment="Top" Width="73" Source="ContractSearch.png"/>
                 <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75"/>
                 <Button x:Name="btn_listar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="152,331,0,0" VerticalAlignment="Top" Width="75"/>
