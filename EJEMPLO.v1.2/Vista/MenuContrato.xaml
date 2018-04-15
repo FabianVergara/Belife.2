@@ -12,12 +12,8 @@
                 <Image x:Name="Contratos_png" Margin="355,24,57,235" Source="Contratos.png" Stretch="Fill"/>
                 <Image x:Name="ContractAdd_png"  Margin="41,107,356,148" Source="ContractAdd.png" Stretch="Fill"/>
                 <Image x:Name="ContractSearch_png" Margin="233,107,162,148" Source="ContractSearch.png" Stretch="Fill"/>
-                <Image x:Name="ContractDelete_png" Margin="41,210,356,45" Source="ContractDelete.png" Stretch="Fill"/>
-                <Image x:Name="ContractUpdate_png" Margin="233,210,162,45" Source="ContractUpdate.png" Stretch="Fill"/>
                 <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="51,180,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                <Button x:Name="btnTerminar" Content="Terminar" HorizontalAlignment="Left" Margin="51,284,0,0" VerticalAlignment="Top" Width="75" Click="btnTerminar_Click"/>
                 <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="245,180,0,0" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click"/>
-                <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
                 <Image x:Name="DataSearch_png" Margin="389,145,32,132" Source="DataSearch.png" Stretch="Fill"/>
                 <ComboBox x:Name="cboFiltro" HorizontalAlignment="Left" Margin="355,196,0,0" VerticalAlignment="Top" Width="117" SelectedIndex="0" SelectionChanged="cboFiltro_SelectionChanged">
                     <ComboBoxItem Content="Seleccione Filtro"/>
