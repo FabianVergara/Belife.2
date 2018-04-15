@@ -60,8 +60,42 @@ namespace Vista
                     
 
                     Con.titular = txt_titular.Text;
-                    Con.PlanAsociado = cbo_plan.SelectedIndex+1;
-//_____________________________________________________________________________________________________________                
+                    Con.PlanAsociado = cbo_plan.SelectedIndex + 1;
+
+                     /*               if(cbo_plan.SelectedItem.Equals("Vida Inicial"))
+                                    { Con.PlanAsociado = "VID01"; }
+                                    else
+                                    {
+                                        if (cbo_plan.SelectedItem.Equals("Vida Total"))
+                                        {
+                                            Con.PlanAsociado = "VID02";
+                                        }
+                                        else
+                                        {
+                                            if (cbo_plan.SelectedItem.Equals("Vida Conductor"))
+                                            {
+                                                Con.PlanAsociado = "VID03";
+                                            }
+                                            else
+                                            {
+                                                if (cbo_plan.SelectedItem.Equals("Vida Senior"))
+                                                {
+                                                    Con.PlanAsociado = "VID04";
+                                                }
+                                                else
+                                                {
+                                                    if (cbo_plan.SelectedItem.Equals("Vida Ahorro"))
+                                                    {
+                                                        Con.PlanAsociado = "VID05";
+                                                    }
+                                    
+                                                }
+                                            }
+                                        }
+                                    }
+                                    */
+                    
+                //_____________________________________________________________________________________________________________                
                 DateTime fechahoy = DateTime.Now;
                 string formatoDeOro = fechahoy.ToString("YYYYMMDDHHmmSS");
                     //validar formato fecha antes de guardar
@@ -116,6 +150,7 @@ namespace Vista
                             {
                                 ss = segundos.ToString();
                             }
+//______________________________________________________________________________________________________________________________
                     int yyyy = int.Parse(aaaa) + 1;//para la fecha de fin de vigencia
                     DateTime fechaCreacion = DateTime.Parse((string.Concat(aaaa, MM, DD, hh, mm, ss)));
                     String fecha = fechaCreacion.ToString("YYYYMMDDHHmmSS");
@@ -124,7 +159,8 @@ namespace Vista
                     Con.InicioVigencia = fecha;
                     DateTime fechaFinVig = DateTime.Parse((string.Concat(yyyy, MM, DD, hh, mm, ss)));
                     Con.FinVigencia = fechaFinVig.ToString("YYYYMMDDHHmmSS");
-
+                    Con.EstaVigente = true;
+                    
                 }
                 else
                 {
