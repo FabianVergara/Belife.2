@@ -50,15 +50,22 @@ namespace Vista
             try
             {
                 //validar si es cliente
-                Contratos con = new Contratos();
-                if (con.buscar(txt_titular.Text) == true) { 
-                
-                String titular = txt_titular.Text;
+                Contratos Con = new Contratos();
+                if (Con.buscar(txt_titular.Text) == true) {
+                    Con = new DALC.Contrato();
+                    Biblioteca.Entidades.Planes Plan;
+                    Plan = new Planes();
 
+                    //Con.Numero es automatico en la BD
+                    
+
+                    Con.titular = txt_titular.Text;
+                    Con.PlanAsociado = cbo_plan.SelectedIndex+1;
+//_____________________________________________________________________________________________________________                
                 DateTime fechahoy = DateTime.Now;
                 string formatoDeOro = fechahoy.ToString("YYYYMMDDHHmmSS");
                     //validar formato fecha antes de guardar
-                    String aaaa = formatoDeOro.Substring(0, 3);
+                    String aaaa = formatoDeOro.Substring(0, 4);
                     int mes = int.Parse(formatoDeOro.Substring(4,2));
                     int dia = int.Parse(formatoDeOro.Substring(6, 2));
                     int hora = int.Parse(formatoDeOro.Substring(8, 2));
@@ -91,27 +98,33 @@ namespace Vista
                             {
                                 hh = hora.ToString();
                             }
-                            string min;
+                            string mm;
                             if (minutos < 10)
                             {
-                                min = string.Concat("0",minutos);
+                                mm = string.Concat("0",minutos);
                             }
                             else
                             {
-                                min = minutos.ToString();
+                                mm = minutos.ToString();
                             }
-                            string seg;
+                            string ss;
                             if (segundos < 10)
                             {
-                                seg = string.Concat("0", segundos);
+                                ss = string.Concat("0", segundos);
                             }
                             else
                             {
-                                seg = segundos.ToString();
+                                ss = segundos.ToString();
                             }
-                    String fecha_lista = (string.Concat(aaaa, MM, DD, hh, min, seg));
-                    String fecha = fecha_lista.ToString("YYYYMMDDHHmmss");
-                    
+                    int yyyy = int.Parse(aaaa) + 1;//para la fecha de fin de vigencia
+                    DateTime fechaCreacion = DateTime.Parse((string.Concat(aaaa, MM, DD, hh, mm, ss)));
+                    String fecha = fechaCreacion.ToString("YYYYMMDDHHmmSS");
+                  
+                    Con.Creacion = fecha;
+                    Con.InicioVigencia = fecha;
+                    DateTime fechaFinVig = DateTime.Parse((string.Concat(yyyy, MM, DD, hh, mm, ss)));
+                    Con.FinVigencia = fechaFinVig.ToString("YYYYMMDDHHmmSS");
+
                 }
                 else
                 {
