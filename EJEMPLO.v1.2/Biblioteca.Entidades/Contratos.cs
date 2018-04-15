@@ -39,6 +39,9 @@ namespace Biblioteca.Entidades
                 Con = new DALC.Contrato();
                 Biblioteca.Entidades.Planes Plan;
                 Plan = new Planes();
+                Biblioteca.Entidades.Tarificador Tar;
+                Tar = new Tarificador();
+
                 
                 Con.Numero = this.NumeroContrato;
                 Con.FechaCreacion = this.Creacion;
@@ -50,7 +53,9 @@ namespace Biblioteca.Entidades
                 Con.FechaFinVigencia = this.FinVigencia;
                 Con.Vigente = this.Vigente;
                 Con.DeclaracionSalud = this.ConDeclaracionSalud;
+                //Con.PrimaAnual=Tar.calculoPrimasanual(Plan.PolizaActual,Con.RutCliente);
                 Con.PrimaAnual = this.PrimaAnual;
+                //Con.PrimaAnual=Tar.calculoPrimasmensual(Plan.PolizaActual,Con.RutCliente);
                 Con.PrimaMensual = this.PrimaMensual;
                 Con.Observaciones = this.Observaciones;
 
@@ -94,8 +99,8 @@ namespace Biblioteca.Entidades
 
                 Con = Entidades.Contrato.First(a => a.Numero.Equals(NumeroContrato));
 
-                Biblioteca.DALC.Plan Plan;
-                Plan = new DALC.Plan();
+                Biblioteca.Entidades.Planes Plan;
+                Plan = new Planes();
 
                 Con.Numero = this.NumeroContrato;
                 Con.FechaCreacion = this.Creacion;

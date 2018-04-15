@@ -161,6 +161,7 @@ namespace Vista
                     DateTime fechaFinVig = DateTime.Parse((string.Concat(yyyy, MM, DD, hh, mm, ss)));
                     Con.FinVigencia = fechaFinVig.ToString("YYYYMMDDHHmmSS");
                     Con.EstaVigente = true;
+                    //si se realiza en la biblioteca de entidades aqui no se realiza
                     Con.PrimaAnual = Tar.calculoPrimasanual(Con.PlanAsociado,Con.Titular);//debe retornar valor y pasarlo a la primaanual
                     Con.PrimaMensual = Tar.calculoPrimaMensual(Con.PlanAsociado, Con.Titular);
                     Con.Observaciones = txt_obs.Text;
