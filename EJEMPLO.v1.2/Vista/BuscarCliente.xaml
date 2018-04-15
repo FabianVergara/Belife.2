@@ -5,21 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="Aseguradora &quot;BE LIFE&quot;" Height="319.058" Width="411.885" ResizeMode="NoResize" WindowStyle="ToolWindow">
-    <Grid>
+        Title="Aseguradora &quot;BE LIFE&quot;" Height="522.713" Width="634.773" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid Margin="0,0,4,-18">
         <GroupBox x:Name="groupBox" Header="Buscador de Contratos por Rut" Margin="10">
             <Grid Margin="0,0,-2,-3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="50*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="label" Content="Rut del Cliente:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="110,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="button" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="256,12,0,0" VerticalAlignment="Top" Width="58" Height="22"/>
-                <Button x:Name="btnActualizar" Content="Actualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,212,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
-                <Button x:Name="btnListar" Content="Listar Clientes" Grid.Column="1" HorizontalAlignment="Left" Margin="127,212,0,0" VerticalAlignment="Top" Width="103" Click="btnListar_Click"/>
-                <Button x:Name="btnEliminar" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="256,212,0,0" VerticalAlignment="Top" Width="75"/>
-                <DataGrid x:Name="dtListado" Grid.Column="1" Margin="10,58,10,0" VerticalAlignment="Top" Height="127" IsReadOnly="True"/>
+                <Label x:Name="label" Content="Rut del Cliente:" Grid.Column="1" HorizontalAlignment="Left" Margin="25,60,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="120,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="button" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="301,63,0,0" VerticalAlignment="Top" Width="58" Height="22"/>
+                <Button x:Name="btnActualizar" Content="Actualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,373,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
+                <Button x:Name="btnListar" Content="Listar Clientes" Grid.Column="1" HorizontalAlignment="Left" Margin="230,373,0,0" VerticalAlignment="Top" Width="103" Click="btnListar_Click"/>
+                <Button x:Name="btnEliminar" Content="Eliminar" Grid.Column="1" HorizontalAlignment="Left" Margin="455,373,0,0" VerticalAlignment="Top" Width="75"/>
+                <DataGrid x:Name="dtListado" Grid.Column="1" Margin="25,107,31,0" VerticalAlignment="Top" Height="200" IsReadOnly="True"/>
+                <Image x:Name="image1" Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="25,2,0,0" VerticalAlignment="Top" Width="52" Source="Clientes.png"/>
+                <Image x:Name="image2" Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="37,319,0,0" VerticalAlignment="Top" Width="52" Source="ClientUpdate.png"/>
+                <Image x:Name="image2_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="467,319,0,0" VerticalAlignment="Top" Width="52" Source="ClientDelete.png"/>
+                <Image x:Name="image2_Copy2" Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="389,37,0,0" VerticalAlignment="Top" Width="52" Source="ClientSearch.png"/>
+                <Button x:Name="button_Copy" Content="Volver" HorizontalAlignment="Left" Margin="25,434,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Grid.Column="1"/>
             </Grid>
         </GroupBox>
 
