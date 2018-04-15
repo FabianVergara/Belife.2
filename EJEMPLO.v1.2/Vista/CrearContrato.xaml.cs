@@ -55,45 +55,12 @@ namespace Vista
                     Con = new DALC.Contrato();
                     Biblioteca.Entidades.Planes Plan;
                     Plan = new Planes();
+                    Biblioteca.Entidades.Tarificador Tar;
+                    Tar = new Tarificador();
 
-                    //Con.Numero es automatico en la BD
                     
+                   
 
-                    Con.titular = txt_titular.Text;
-                    Con.PlanAsociado = cbo_plan.SelectedIndex + 1;
-
-                     /*               if(cbo_plan.SelectedItem.Equals("Vida Inicial"))
-                                    { Con.PlanAsociado = "VID01"; }
-                                    else
-                                    {
-                                        if (cbo_plan.SelectedItem.Equals("Vida Total"))
-                                        {
-                                            Con.PlanAsociado = "VID02";
-                                        }
-                                        else
-                                        {
-                                            if (cbo_plan.SelectedItem.Equals("Vida Conductor"))
-                                            {
-                                                Con.PlanAsociado = "VID03";
-                                            }
-                                            else
-                                            {
-                                                if (cbo_plan.SelectedItem.Equals("Vida Senior"))
-                                                {
-                                                    Con.PlanAsociado = "VID04";
-                                                }
-                                                else
-                                                {
-                                                    if (cbo_plan.SelectedItem.Equals("Vida Ahorro"))
-                                                    {
-                                                        Con.PlanAsociado = "VID05";
-                                                    }
-                                    
-                                                }
-                                            }
-                                        }
-                                    }
-                                    */
                     
                 //_____________________________________________________________________________________________________________                
                 DateTime fechahoy = DateTime.Now;
@@ -154,13 +121,50 @@ namespace Vista
                     int yyyy = int.Parse(aaaa) + 1;//para la fecha de fin de vigencia
                     DateTime fechaCreacion = DateTime.Parse((string.Concat(aaaa, MM, DD, hh, mm, ss)));
                     String fecha = fechaCreacion.ToString("YYYYMMDDHHmmSS");
-                  
+                    //Con.Numero es automatico en la BD
+                    Con.titular = txt_titular.Text;
+                    Con.PlanAsociado = cbo_plan.SelectedIndex + 1;
+                    /*               if(cbo_plan.SelectedItem.Equals("Vida Inicial"))
+               { Con.PlanAsociado = "VID01"; }
+               else
+               {
+                   if (cbo_plan.SelectedItem.Equals("Vida Total"))
+                   {
+                       Con.PlanAsociado = "VID02";
+                   }
+                   else
+                   {
+                       if (cbo_plan.SelectedItem.Equals("Vida Conductor"))
+                       {
+                           Con.PlanAsociado = "VID03";
+                       }
+                       else
+                       {
+                           if (cbo_plan.SelectedItem.Equals("Vida Senior"))
+                           {
+                               Con.PlanAsociado = "VID04";
+                           }
+                           else
+                           {
+                               if (cbo_plan.SelectedItem.Equals("Vida Ahorro"))
+                               {
+                                   Con.PlanAsociado = "VID05";
+                               }
+
+                           }
+                       }
+                   }
+               }
+               */
                     Con.Creacion = fecha;
                     Con.InicioVigencia = fecha;
                     DateTime fechaFinVig = DateTime.Parse((string.Concat(yyyy, MM, DD, hh, mm, ss)));
                     Con.FinVigencia = fechaFinVig.ToString("YYYYMMDDHHmmSS");
                     Con.EstaVigente = true;
-                    
+                    Con.PrimaAnual = Tar.calculoPrimasanual(Con.PlanAsociado,Con.Titular);//debe retornar valor y pasarlo a la primaanual
+                    Con.PrimaMensual = Tar.calculoPrimaMensual(Con.PlanAsociado, Con.Titular);
+                    Con.Observaciones = txt_obs.Text;
+
                 }
                 else
                 {

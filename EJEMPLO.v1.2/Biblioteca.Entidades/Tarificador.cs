@@ -22,7 +22,7 @@ namespace Biblioteca.Entidades
             Entidades = new BeLifeEntities();
         }
 
-        public double calculoPrimasanual(String codigo)
+        public double calculoPrimasanual(String codigo,String rut)
         {
             try
             {
@@ -33,12 +33,10 @@ namespace Biblioteca.Entidades
                 Biblioteca.Entidades.Contratos Cont;
                 Cont = new Entidades.Contratos();
                 double primab;
-                if (Cont.BuscarContrato(codigo) == true)
-                {
                     Biblioteca.Entidades.Clientes cli;
                     cli = new Clientes();
-                    cli.Buscar(Cont.Titular);
-                    Plan.BuscarPlan(Cont.PlanAsociado);
+                    cli.Buscar(rut);
+                    Plan.BuscarPlan(codigo);
                     //le paso el valor de la prima base
                     primab = Plan.PrimaBase;
 
@@ -117,7 +115,7 @@ namespace Biblioteca.Entidades
                     
 
 
-                }
+                
                 return Calculo;
             }
             catch (Exception)
@@ -127,7 +125,7 @@ namespace Biblioteca.Entidades
             }
             
         }
-        public double calculoPrimasmensual(String codigo)
+        public double calculoPrimasmensual(String codigo,String rut)
         {
             try
             {
@@ -138,12 +136,11 @@ namespace Biblioteca.Entidades
                 Biblioteca.Entidades.Contratos Cont;
                 Cont = new Entidades.Contratos();
                 double primab;
-                if (Cont.BuscarContrato(codigo) == true)
-                {
-                    Biblioteca.Entidades.Clientes cli;
+               
+                  Biblioteca.Entidades.Clientes cli;
                     cli = new Clientes();
-                    cli.Buscar(Cont.Titular);
-                    Plan.BuscarPlan(Cont.PlanAsociado);
+                    cli.Buscar(rut);
+                    Plan.BuscarPlan(codigo);
                     //le paso el valor de la prima base
                     primab = Plan.PrimaBase;
 
