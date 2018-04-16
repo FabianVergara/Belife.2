@@ -68,7 +68,7 @@ namespace Vista
         {
             Contratos con = new Contratos();
             con.NumeroContrato = txt_idcontrato.Text;
-            this.tbl_contrato.ItemsSource = con.ListarTodo();
+            this.tbl_contrato.ItemsSource = con.ListarTodo().toList();
 
 
         }
