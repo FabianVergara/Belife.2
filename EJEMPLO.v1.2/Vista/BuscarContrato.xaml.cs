@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Biblioteca.Entidades;
 
 namespace Vista
 {
@@ -26,7 +27,7 @@ namespace Vista
         public BuscarContrato()
         {
             InitializeComponent();
-
+            LlenarTabla();//
             
 
 
@@ -52,6 +53,15 @@ namespace Vista
             tablita.Columns.Add("Prima Mensual", typeof(string));
             tablita.Columns.Add("Observaciones", typeof(string));
             tbl_contrato.IsItemItsOwnContainer(tablita);
+
+        }
+
+        private void btn_buscar_Click(object sender, RoutedEventArgs e)
+        {
+            Contratos con = new Contratos();
+            con.NumeroContrato = txt_idcontrato.Text;
+            con.BuscarContrato();
+            tbl_contrato.ItemContainerGenerator()
 
         }
     }

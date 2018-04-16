@@ -5,20 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="Buscar Contrato" Height="492.772" Width="487.611">
+        Title="Buscar Contrato" Height="536.458" Width="793.41">
     <Grid>
         <GroupBox x:Name="groupBox" Header="Buscador de Contrato" Margin="10">
             <Grid Margin="10,10,-2,1">
                 <Label x:Name="label" Content="Identificador del Contrato:" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                 <TextBox x:Name="txt_idcontrato" HorizontalAlignment="Left" Height="23" Margin="165,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
-                <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="279,66,0,0" VerticalAlignment="Top" Width="75"/>
-                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="114" Width="353" />
+                <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="279,66,0,0" VerticalAlignment="Top" Width="75" Click="btn_buscar_Click"/>
+                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="12,116,0,0" VerticalAlignment="Top" Height="123" Width="693" ItemsSource="{Binding ElementName=btn_buscar, Mode=OneWay}" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"/>
+                        <DataGridTextColumn Header="Creacion"/>
+                        <DataGridTextColumn Header="Termino"/>
+                        <DataGridTextColumn Header="Titular"/>
+                        <DataGridTextColumn Header="Plan"/>
+                        <DataGridTextColumn Header="Poliza"/>
+                        <DataGridTextColumn Header="Inicio Vig"/>
+                        <DataGridTextColumn Header="Fin Vig"/>
+                        <DataGridTextColumn Header="Vigencia"/>
+                        <DataGridTextColumn Header="Salud"/>
+                        <DataGridTextColumn Header="PrimaAnual"/>
+                        <DataGridTextColumn Header="PrimaMensual"/>
+                        <DataGridTextColumn Header="Observaciones"/>
+                    </DataGrid.Columns>
+                </DataGrid>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="290,0,0,0" VerticalAlignment="Top" Width="73" Source="ContractSearch.png"/>
                 <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="btn_listar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="152,331,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="288,331,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.666,10.015"/>
+                <Button x:Name="btn_listar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="318,336,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="618,336,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.666,10.015"/>
                 <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="52" Margin="12,261,0,0" VerticalAlignment="Top" Width="73" Source="ContractUpdate.png"/>
-                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="52" Margin="290,261,0,0" VerticalAlignment="Top" Width="73" Source="ContractDelete.png"/>
+                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="52" Margin="620,261,0,0" VerticalAlignment="Top" Width="73" Source="ContractDelete.png"/>
                 <Image x:Name="image1" HorizontalAlignment="Left" Height="49" Margin="21,6,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="0.5,0.5" Source="Contratos.png">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -29,7 +45,6 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Button x:Name="btn_volver" Content="Volver" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
             </Grid>
         </GroupBox>
 
