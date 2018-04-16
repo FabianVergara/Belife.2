@@ -63,5 +63,37 @@ namespace Vista
 
 
         }
+
+        private void btn_listar_Click(object sender, RoutedEventArgs e)
+        {
+            Contratos con = new Contratos();
+            con.NumeroContrato = txt_idcontrato.Text;
+            this.tbl_contrato.ItemsSource = con.ListarTodo();
+
+
+        }
+
+        private void btn_actualizar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Contratos con = new Contratos();
+
+                if (con.Termino.equals(null))
+                {
+                    //mando un mensaje de error
+                }
+                else
+                {
+                    //actualizo
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Biblioteca.Entidades.Logger.Mensaje(ex.Message);
+            }
+            
+        }
     }
 }

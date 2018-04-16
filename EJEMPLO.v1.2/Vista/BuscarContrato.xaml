@@ -38,8 +38,8 @@
                     </DataGrid.Resources>
                 </DataGrid>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="290,0,0,0" VerticalAlignment="Top" Width="73" Source="ContractSearch.png"/>
-                <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="btn_listar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="318,336,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75" Click="btn_actualizar_Click"/>
+                <Button x:Name="btn_listar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="318,336,0,0" VerticalAlignment="Top" Width="75" Click="btn_listar_Click"/>
                 <Button x:Name="btn_eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="618,336,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.666,10.015"/>
                 <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="52" Margin="12,261,0,0" VerticalAlignment="Top" Width="73" Source="ContractUpdate.png"/>
                 <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="52" Margin="620,261,0,0" VerticalAlignment="Top" Width="73" Source="ContractDelete.png"/>
