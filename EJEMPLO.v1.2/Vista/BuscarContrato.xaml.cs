@@ -75,25 +75,17 @@ namespace Vista
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Contratos con = new Contratos();
-
-                if (con.Termino.equals(null))
-                {
-                    //mando un mensaje de error
-                }
-                else
-                {
-                    //actualizo
-                }
-            }
-            catch (Exception ex)
-            {
-
-                Biblioteca.Entidades.Logger.Mensaje(ex.Message);
-            }
+        
             
+        }
+
+        private void btn_eliminar_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView filaseleccionada = tbl_contrato.SelectedItem as DataRowView;
+            if (filaseleccionada==null)
+            {
+                MessageBox.Show("Debe seleccionar un contrato")
+            }
         }
     }
 }
