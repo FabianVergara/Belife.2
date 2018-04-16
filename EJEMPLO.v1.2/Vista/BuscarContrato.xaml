@@ -12,22 +12,30 @@
                 <Label x:Name="label" Content="Identificador del Contrato:" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                 <TextBox x:Name="txt_idcontrato" HorizontalAlignment="Left" Height="23" Margin="165,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
                 <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="279,66,0,0" VerticalAlignment="Top" Width="75" Click="btn_buscar_Click"/>
-                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="12,116,0,0" VerticalAlignment="Top" Height="123" Width="693" ItemsSource="{Binding ElementName=btn_buscar, Mode=OneWay}" >
+                <DataGrid x:Name="tbl_contrato" HorizontalAlignment="Left" Margin="12,116,0,0" VerticalAlignment="Top" Height="125" Width="723" ItemsSource="{Binding ElementName=btn_buscar, Mode=OneWay}" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID"/>
-                        <DataGridTextColumn Header="Creacion"/>
-                        <DataGridTextColumn Header="Termino"/>
-                        <DataGridTextColumn Header="Titular"/>
-                        <DataGridTextColumn Header="Plan"/>
-                        <DataGridTextColumn Header="Poliza"/>
-                        <DataGridTextColumn Header="Inicio Vig"/>
-                        <DataGridTextColumn Header="Fin Vig"/>
-                        <DataGridTextColumn Header="Vigencia"/>
-                        <DataGridTextColumn Header="Salud"/>
-                        <DataGridTextColumn Header="PrimaAnual"/>
-                        <DataGridTextColumn Header="PrimaMensual"/>
-                        <DataGridTextColumn Header="Observaciones"/>
+                        <DataGridTextColumn Header="ID" Width="50"/>
+                        <DataGridTextColumn Header="Creacion" Width="50"/>
+                        <DataGridTextColumn Header="Termino" Width="50"/>
+                        <DataGridTextColumn Header="Titular" Width="50"/>
+                        <DataGridTextColumn Header="Plan" Width="50"/>
+                        <DataGridTextColumn Header="Poliza" Width="50"/>
+                        <DataGridTextColumn Header="Inicio Vig" Width="50"/>
+                        <DataGridTextColumn Header="Fin Vig" Width="50"/>
+                        <DataGridTextColumn Header="Vigencia" Width="50"/>
+                        <DataGridTextColumn Header="Salud" Width="50"/>
+                        <DataGridTextColumn Header="PrimaAnual" Width="70"/>
+                        <DataGridTextColumn Header="PrimaMensual" Width="70"/>
+                        <DataGridTextColumn Header="Observaciones" Width="100"/>
                     </DataGrid.Columns>
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="Violet"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="BorderThickness" Value="1,1,2,2"/>
+                            <Setter Property="BorderBrush" Value="Black"/>
+                        </Style>
+                    </DataGrid.Resources>
                 </DataGrid>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="52" Margin="290,0,0,0" VerticalAlignment="Top" Width="73" Source="ContractSearch.png"/>
                 <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75"/>

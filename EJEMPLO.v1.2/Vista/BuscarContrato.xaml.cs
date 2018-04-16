@@ -27,7 +27,6 @@ namespace Vista
         public BuscarContrato()
         {
             InitializeComponent();
-            LlenarTabla();//
             
 
 
@@ -60,8 +59,8 @@ namespace Vista
         {
             Contratos con = new Contratos();
             con.NumeroContrato = txt_idcontrato.Text;
-            con.BuscarContrato();
-            tbl_contrato.ItemContainerGenerator()
+            this.tbl_contrato.ItemsSource = con.BuscarContrato();//asumo que este comando toma los datos de contrato
+
 
         }
     }
