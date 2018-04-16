@@ -35,25 +35,25 @@ namespace Vista
 
         //llenar tabla
 
-        private void LlenarTabla(IEnumerable<Contratos> listado) {
-            DataTable tablita = new DataTable();
+                //private void LlenarTabla(IEnumerable<Contratos> listado) {
+                //    DataTable tablita = new DataTable();
 
-            tablita.Columns.Add("Id",typeof(string));
-            tablita.Columns.Add("Creación", typeof(string));
-            tablita.Columns.Add("Termino", typeof(string));
-            tablita.Columns.Add("Titular",typeof(string));
-            tablita.Columns.Add("Plan", typeof(string));
-            tablita.Columns.Add("Poliza", typeof(string));
-            tablita.Columns.Add("Inicio Vig", typeof(string));
-            tablita.Columns.Add("Fin Vig", typeof(string));
-            tablita.Columns.Add("Vig", typeof(string));
-            tablita.Columns.Add("Salud",typeof(string));
-            tablita.Columns.Add("Prima Anual", typeof(string));
-            tablita.Columns.Add("Prima Mensual", typeof(string));
-            tablita.Columns.Add("Observaciones", typeof(string));
-            tbl_contrato.IsItemItsOwnContainer(tablita);
+                //    tablita.Columns.Add("Id",typeof(string));
+                //    tablita.Columns.Add("Creación", typeof(string));
+                //    tablita.Columns.Add("Termino", typeof(string));
+                //    tablita.Columns.Add("Titular",typeof(string));
+                //    tablita.Columns.Add("Plan", typeof(string));
+                //    tablita.Columns.Add("Poliza", typeof(string));
+                //    tablita.Columns.Add("Inicio Vig", typeof(string));
+                //    tablita.Columns.Add("Fin Vig", typeof(string));
+                //    tablita.Columns.Add("Vig", typeof(string));
+                //    tablita.Columns.Add("Salud",typeof(string));
+                //    tablita.Columns.Add("Prima Anual", typeof(string));
+                //    tablita.Columns.Add("Prima Mensual", typeof(string));
+                //    tablita.Columns.Add("Observaciones", typeof(string));
+                //    tbl_contrato.IsItemItsOwnContainer(tablita);
 
-        }
+                //}
 
         private void btn_buscar_Click(object sender, RoutedEventArgs e)
         {

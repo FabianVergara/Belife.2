@@ -32,7 +32,15 @@ namespace Vista
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void btnListar_Click(object sender, RoutedEventArgs e)
